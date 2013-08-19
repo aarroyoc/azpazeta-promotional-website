@@ -1,0 +1,33 @@
+/*
+* CSS for Azpazeta
+*/
+@font-face{
+	font-family: 'Ubuntu Condensed';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Ubuntu Condensed'), local('UbuntuCondensed-Regular'), url(../fonts/UbuntuCondensed.woff) format('woff');
+}
+body{
+    text-align: center;
+	font-family: 'Ubuntu Condensed', sans-serif;
+	background-color: rgb(156,236,156);
+}
+iframe.hex{
+	height: 65px;
+	border: none;
+}
+header{
+	text-align: center;
+	height: 65px;
+	width: 100%;
+}
+.hex{
+	display: inline;
+}
+h1.hex{
+	margin-left: 10%;
+	margin-right: 10%;
+}
+iframe{
+	border: none;
+}
