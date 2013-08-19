@@ -85,7 +85,7 @@ window.addEventListener("DOMContentLoaded",function(){
 
 });
 window.addEventListener("DOMContentLoaded",function(){
-	var list=["images/azpazeta_svg_512.png","images/azpazeta_svg_128.png"];
+	var list=["images/azpazeta_svg_512.png","images/azpazeta_svg_128.png","images/AZP1.png","images/AZP2.png","images/AZP3.png","images/AZP4.png","images/AZP5.png","images/AZP6.png"];
 	var current=0;
 	var img=document.getElementById("visor");
 	var prev=document.getElementById("prev");
