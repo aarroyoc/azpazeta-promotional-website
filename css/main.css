@@ -34,3 +34,7 @@ iframe{
 .underline{
 	text-decoration: underline;
 }
+table{
+	margin-left: auto;
+	margin-right: auto;
+}
