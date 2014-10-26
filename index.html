@@ -39,6 +39,13 @@
 	<script src="js/main.js"></script>
 </head>
 <body>
+		<script src="/js/cookiechoices.js"></script>
+		<script>
+		  document.addEventListener('DOMContentLoaded', function(event) {
+			cookieChoices.showCookieConsentDialog('This site uses cookies from 3rd parties. Please, accept the cookies to continue visiting the site',
+				'Accept the cookies', 'Learn more', 'http://adrianarroyocalle.github.io/cookies.txt');
+		  });
+		</script>
 <!-- First a big title and a cube rotating with the Azpazeta Logo -->
 	<header>
 		<img class="hex" src="images/azpazeta_svg.svg" alt="Azpazeta logo">
@@ -49,7 +56,7 @@
 		<section id="cube">
 		</section>
 		<section id="ad">
-			<iframe style="border: 0; width: 728px; height: 90px;overflow: hidden;" src="http://coinurl.com/get.php?id=16374"></iframe>
+			<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-6944504853839360" data-ad-slot="9167096336"></ins>
 		</section>
 		<section id="description">
 			<h3>What is Azpazeta?</h3>
@@ -126,15 +133,6 @@
 				<p>Please use the main server always because Azpazeta project gets some money in the links for support the game</p>
 			</div>
 		</section>
-		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<!-- Azpazeta -->
-		<ins class="adsbygoogle"
-     			style="display:inline-block;width:728px;height:90px"
-     			data-ad-client="ca-pub-7120835981970216"
-     			data-ad-slot="2749286433"></ins>
-		<script>
-		(adsbygoogle = window.adsbygoogle || []).push({});
-		</script>
 		<section id="trailer">
 			<h3>Trailer</h3>
 			<iframe width="560" height="315" src="//www.youtube-nocookie.com/embed/xC69N3M1JRY" allowfullscreen></iframe>
@@ -155,21 +153,13 @@
 		</section>
 		<a id="musiccontrol">Turn on/off music</a>
 		<div id="disqus_thread"></div>
-			<script type="text/javascript">
-			/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-			var disqus_shortname = 'adrianarroyocallegithub'; // required: replace example with your forum shortname
-
-			/* * * DON'T EDIT BELOW THIS LINE * * */
-			(function() {
-				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-				dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-			})();
-			</script>
-			<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-			<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 		<section id="ad2">
-			<iframe style="border: 0; width: 728px; height: 90px;overflow: hidden;" src="http://coinurl.com/get.php?id=16374"></iframe>
+			<ins class="adsbygoogle"
+				style="display:inline-block;width:728px;height:90px"
+				data-ad-client="ca-pub-6944504853839360"
+				data-ad-slot="1643829534"></ins>
 		</section>
 	</article>
 	<footer>
@@ -186,7 +176,9 @@
 		</p>
 		<small>Hosted on GitHub Pages</small>
 	</footer>
-	<script type="text/javascript">
+	<!-- Cookies -->
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script type="text/plain" class="cookie">
 	  (function() {
 		var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
 		po.src = 'https://apis.google.com/js/plusone.js';
@@ -194,7 +186,7 @@
 	  })();
 	</script>
 	<!-- Google Analytics -->
-	<script>
+	<script type="text/plain" class="cookie">
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -204,5 +196,49 @@
 	  ga('send', 'pageview');
 
 	</script>
+	<script type="text/plain" class="cookie">
+	/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	var disqus_shortname = 'adrianarroyocallegithub'; // required: replace example with your forum shortname
+	/* * * DON'T EDIT BELOW THIS LINE * * */
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+	</script>
+	<script class="cookie" type="text/plain">
+		(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+	<script type="text/javascript">
+	function execCookies(){
+		var scripts=document.getElementsByClassName("cookie");
+		for(var i=0;i<scripts.length;i++)
+		{
+			insertScript(scripts[i].textContent);
+		}
+	}	
+	function insertScript(content){
+		var script=document.createElement("script");
+		script.type="text/javascript";
+		script.innerHTML=content;
+		document.getElementsByTagName("head")[0].appendChild(script);
+	}
+	function getCookie(cname) {
+		var name = cname + "=";
+		var ca = document.cookie.split(';');
+		for(var i=0; i<ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0)==' ') c = c.substring(1);
+			if (c.indexOf(name) != -1) return c.substring(name.length,c.length);
+		}
+		return "";
+	}
+	if(getCookie("displayCookieConsent")=="y")
+	{
+		console.log("Consent already accepted");
+		execCookies();
+	}
+	</script>
+	<!-- End cookies -->
 </body>	
 </html>
