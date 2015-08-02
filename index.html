@@ -39,13 +39,6 @@
 	<script src="js/main.js"></script>
 </head>
 <body>
-		<script src="/js/cookiechoices.js"></script>
-		<script>
-		  document.addEventListener('DOMContentLoaded', function(event) {
-			cookieChoices.showCookieConsentDialog('This site uses cookies from 3rd parties. Please, accept the cookies to continue visiting the site',
-				'Accept the cookies', 'Learn more', 'http://adrianarroyocalle.github.io/cookies.txt');
-		  });
-		</script>
 <!-- First a big title and a cube rotating with the Azpazeta Logo -->
 	<header>
 		<img class="hex" src="images/azpazeta_svg.svg" alt="Azpazeta logo">
@@ -209,36 +202,8 @@
 	<script class="cookie" type="text/plain">
 		(adsbygoogle = window.adsbygoogle || []).push({});
 	</script>
-	<script type="text/javascript">
-	function execCookies(){
-		var scripts=document.getElementsByClassName("cookie");
-		for(var i=0;i<scripts.length;i++)
-		{
-			insertScript(scripts[i].textContent);
-		}
-	}	
-	function insertScript(content){
-		var script=document.createElement("script");
-		script.type="text/javascript";
-		script.innerHTML=content;
-		document.getElementsByTagName("head")[0].appendChild(script);
-	}
-	function getCookie(cname) {
-		var name = cname + "=";
-		var ca = document.cookie.split(';');
-		for(var i=0; i<ca.length; i++) {
-			var c = ca[i];
-			while (c.charAt(0)==' ') c = c.substring(1);
-			if (c.indexOf(name) != -1) return c.substring(name.length,c.length);
-		}
-		return "";
-	}
-	if(getCookie("displayCookieConsent")=="y")
-	{
-		console.log("Consent already accepted");
-		execCookies();
-	}
-	</script>
+	<script src="/js/cookie.js"></script>
+	<script>euroCookie("http://adrianarroyocalle.github.io/cookies.txt");</script>
 	<!-- End cookies -->
 </body>	
 </html>
